@@ -3,6 +3,11 @@ body {
     
 }
 
+#userInfo {
+    width: 60%;
+    margin: 2%;
+}
+
 .moodedNav {
     background: #eaa535;
     color: whitesmoke;
