@@ -1,0 +1,40 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+body, html{
+    background: lightslategrey;
+    width: 100%;
+    height: 100%;
+}
+
+.form-inline {
+    position: relative;
+    margin-left: 90%;
+    margin-top: 1%;
+}
+
+
+#headDiv {
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin-top: 1%;
+    margin-left: 10%;
+    background-color: aqua;
+}
+
+#bodyDiv {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    background-color: bisque;
+}
+
+.bg-light {
+    background-color: orange;
+}
