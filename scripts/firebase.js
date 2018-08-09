@@ -1,3 +1,6 @@
+function firebaseInitialize(idInput) {
+    console.log("facebook unique id is now: " + facebookUniqueID);
+    console.log(idInput);
 
 // Initialize Firebase
         var config = {
@@ -22,7 +25,7 @@ $("#buttonClick").on("click", function() {
     var catsId = $("#catsId").prop('checked');
     var puppiesId = $("#puppiesId").prop('checked');
     
-    firebase.database().ref("kanzbra_test").set({
+    firebase.database().ref(facebookUniqueID+"-"+facebookUsername).set({
         firstword: firstWord,
         secondword: secondWord,
         thirdword: thirdWord,
@@ -35,3 +38,5 @@ $("#buttonClick").on("click", function() {
         puppiesd: puppiesId,
     });
 });
+
+}
