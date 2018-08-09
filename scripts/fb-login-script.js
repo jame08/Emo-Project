@@ -11,6 +11,7 @@
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
       testAPI();
+      console.log("this is statuschange callback: " + facebookUniqueID)
       $('#bodyDiv').html($('<object type="text/html" width="100%" height="100%" data="./htmls/logged-in.html"></object>'));
     } else {
       // The person is not logged into your app or we are unable to tell.
@@ -24,6 +25,7 @@
   function checkLoginState() {
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
+      console.log("this is checkloginstatus callback: " + facebookUniqueID)
     });
   }
 
@@ -50,6 +52,7 @@
 
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
+      console.log("this is get login callback: " + facebookUniqueID)
     });
 
   };
@@ -70,10 +73,10 @@
     FB.api('/me', function(response) {
       facebookUniqueID = response.id;
       facebookUsername = response.name;
-
+      console.log("this is testapi callback: " + facebookUniqueID)
       console.log(response.id);
+      firebaseInitialize(response.id);
       $('#headDiv').html($('<h1> you are logged in as: ' + response.name + ' right now!</h1>'));  
     });
   }
 
-  console.log(facebookUniqueID)

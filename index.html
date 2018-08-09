@@ -11,6 +11,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- firebase called from index-->
+        <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
 
     
@@ -19,6 +22,27 @@
     </head>
 
 <body>
+    <script src="./scripts/firebase.js"></script>
+    <script src="./scripts/fb-login-script.js"></script>   
+
+    <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand">Mooded</a>
+            <form class="form-inline">
+                    <div class="fb-login-button" on-login="checkLoginState();" data-max-rows="1" data-size="small" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
+            </form>
+    </nav>
+
+    <!--
+    Below we include the Login Button social plugin. This button uses
+    the JavaScript SDK to present a graphical Login button that triggers
+    the FB.login() function when clicked.
+    -->
+
+    <div id="status">
+    </div>
+        <div id="headDiv">head</div>
+        <div id="bodyDiv">body</div>
+        <div id="emptyDiv"></div>
         <script src="../scripts/fb-login-script.js"></script> 
         <div class="hero">
 
